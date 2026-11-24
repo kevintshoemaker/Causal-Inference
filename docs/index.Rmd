@@ -17,7 +17,7 @@ output:
 **Instructors:** Kevin Shoemaker and Todd Steury, Dept. of Natural Resources & Environmental Science\
 **Offices:** Kevin: Fleischmann Agriculture, room 220e; Todd: Fleischmann Agriculture, room 217\
 **Email:** kevinshoemaker@unr.edu; tsteury@unr.edu (preferred contact)\
-**Office hours:** [to be announced], or by appointment\
+**Office hours:** by appointment\
 **Credits:** 2 credits, letter grade\
 **Section:** 1003 (class number 30643), in person\
 **Course website:** <https://kevintshoemaker.github.io/Causal-Inference/>\
@@ -26,7 +26,7 @@ output:
 
 ## Course meeting time
 
-**Class meeting:** one 2-hour meeting per week, [day and time to be announced], in [room to be announced], January 19 to May 4, 2027
+**Class meeting:** one 2-hour meeting per week, Tuesdays, 1:30 to 3:30 PM (tentative), in [room to be announced], January 19 to May 4, 2027
 
 ## Course description
 
