@@ -79,7 +79,10 @@ def main():
     body = "\n".join(lines[1:]).strip("\n").split("\n\n", 1)
     subtitle, intro = body[0].strip(), body[1]
     course_name = subtitle.split(",")[0]  # "Causal Inference and Analysis"
-    intro = intro.rstrip() + f"\\\n**Course website:** <{SITE_URL}>\\\n**Syllabus as a PDF:** [Syllabus.pdf](Syllabus.pdf)\n"
+    intro = intro.rstrip()
+    if SITE_URL not in intro:  # the syllabus itself normally carries the website line
+        intro += f"\\\n**Course website:** <{SITE_URL}>"
+    intro += "\\\n**Syllabus (PDF):** [download the syllabus as a PDF](Syllabus.pdf)\n"
 
     home, sched = [intro], []
     for heading, text in sections:

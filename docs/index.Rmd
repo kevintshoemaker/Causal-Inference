@@ -21,7 +21,7 @@ output:
 **Credits:** 2 credits, letter grade\
 **Section:** 1003 (class number 30643), in person\
 **Course website:** <https://kevintshoemaker.github.io/Causal-Inference/>\
-**Syllabus as a PDF:** [Syllabus.pdf](Syllabus.pdf)
+**Syllabus (PDF):** [download the syllabus as a PDF](Syllabus.pdf)
 
 
 ## Course meeting time
