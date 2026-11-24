@@ -7,3 +7,6 @@ planning/
 .RData
 .Rproj.user/
 __pycache__/
+
+# Connor's original drafts: kept locally only
+syllabus/archive/Causality*Syllabus*.docx

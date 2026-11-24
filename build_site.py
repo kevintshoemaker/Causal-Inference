@@ -1,24 +1,28 @@
 """Build the course website in docs/ (an R Markdown site, like NRES 746 and NRES 470).
 
-    python build_site.py
+    python build_site.py                      re-render the site from the existing pages
+    python build_site.py path/to/export.docx  also refresh the syllabus pages first
 
-Steps:
-1. Convert the current Word export of the syllabus to Markdown and split it into
-   docs/index.Rmd (home page = syllabus) and docs/schedule.Rmd (schedule + readings).
-   These two files are GENERATED: edit the syllabus, re-export it, and rerun this script.
-2. Copy the syllabus PDF to docs/Syllabus.pdf.
-3. Run rmarkdown::render_site("docs").
+The syllabus lives in the Claude Doc. No Word or Markdown copy is kept in the repo. To refresh
+the website after the doc changes:
+1. Export the doc as PDF and save it over syllabus/NRES701A_Syllabus_v5_DRAFT.pdf (rename the
+   file and SYLLABUS_PDF below when the version changes).
+2. Export the doc as Word (or Markdown) to a temporary location and pass its path to this
+   script. It is split into docs/index.Rmd (home page = syllabus) and docs/schedule.Rmd
+   (schedule + readings). Those two files are GENERATED: do not edit them by hand.
+3. Delete the temporary export.
 
+Every run copies the syllabus PDF to docs/Syllabus.pdf and runs rmarkdown::render_site("docs").
 The other pages (docs/lectures.Rmd, docs/Links.Rmd) and docs/_site.yml are edited by hand.
 """
 import re
 import shutil
 import subprocess
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 DOCS = ROOT / "docs"
-SYLLABUS_DOCX = ROOT / "syllabus" / "NRES701A_Syllabus_v5_DRAFT.docx"
 SYLLABUS_PDF = ROOT / "syllabus" / "NRES701A_Syllabus_v5_DRAFT.pdf"
 SITE_URL = "https://kevintshoemaker.github.io/Causal-Inference/"
 TERM = "Spring 2027"
@@ -44,9 +48,9 @@ output:
 """
 
 
-def syllabus_markdown():
+def syllabus_markdown(export):
     out = subprocess.run(
-        [str(PANDOC_DIR / "pandoc.exe"), str(SYLLABUS_DOCX), "-t", "gfm", "--wrap=none"],
+        [str(PANDOC_DIR / "pandoc.exe"), str(export), "-t", "gfm", "--wrap=none"],
         check=True, capture_output=True, encoding="utf-8",
     )
     md = out.stdout
@@ -65,8 +69,8 @@ def split_sections(md):
     return preamble, sections
 
 
-def main():
-    preamble, sections = split_sections(syllabus_markdown())
+def write_syllabus_pages(export):
+    preamble, sections = split_sections(syllabus_markdown(export))
     names = [h for h, _ in sections]
     for needed in ("Course schedule", "Readings by week"):
         if needed not in names:
@@ -107,6 +111,11 @@ def main():
         + "\n\n".join(sched) + "\n",
         encoding="utf-8",
     )
+
+
+def main():
+    if len(sys.argv) > 1:
+        write_syllabus_pages(Path(sys.argv[1]))
     shutil.copyfile(SYLLABUS_PDF, DOCS / "Syllabus.pdf")
 
     subprocess.run(
