@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Causal Inference and Analysis" />
+
+
+<title>Welcome to NRES 701A</title>
+
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">NRES 701A</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Schedule
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="schedule.html">Course Schedule</a>
+    </li>
+    <li>
+      <a href="Syllabus.pdf">Syllabus (PDF)</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Lectures
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="lectures.html#week1">Week 1: Why causality?</a>
+    </li>
+    <li>
+      <a href="lectures.html#week2">Week 2: What is a cause?</a>
+    </li>
+    <li>
+      <a href="lectures.html#week3">Week 3: Causal models and graphs</a>
+    </li>
+    <li>
+      <a href="lectures.html#week4">Week 4: Confounding and the smoking debate</a>
+    </li>
+    <li>
+      <a href="lectures.html#week5">Week 5: Back-door criterion, colliders and the do-operator</a>
+    </li>
+    <li>
+      <a href="lectures.html#week6">Week 6: Two frameworks and mediation</a>
+    </li>
+    <li>
+      <a href="lectures.html#week7">Week 7: Experiments and quasi-experiments</a>
+    </li>
+    <li>
+      <a href="lectures.html#week8">Week 8: Observational data and unmeasured confounders</a>
+    </li>
+    <li>
+      <a href="lectures.html#week9">Week 9: Path analysis and structural equation models</a>
+    </li>
+    <li>
+      <a href="lectures.html#week10">Week 10: Time series and dynamical systems</a>
+    </li>
+    <li>
+      <a href="lectures.html#week11">Week 11: Complexity and stability</a>
+    </li>
+    <li>
+      <a href="lectures.html#week12">Week 12: Feedback, networks and systems thinking</a>
+    </li>
+    <li>
+      <a href="lectures.html#week13">Week 13: Synthesis: from DAG to study design</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="Links.html">Links</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Welcome to NRES 701A</h1>
+<h4 class="author">Causal Inference and Analysis</h4>
+<h4 class="date">Spring 2027</h4>
+
+</div>
+
+
+<!-- GENERATED by build_site.py from the syllabus. Do not edit by hand. -->
+<p><strong>Draft, subject to change.</strong> This is a preliminary
+syllabus to help students decide whether to enroll. The readings,
+schedule and assignment details will probably change before the semester
+starts.</p>
+<p><strong>Instructors:</strong> Kevin Shoemaker and Todd Steury, Dept.
+of Natural Resources &amp; Environmental Science<br />
+<strong>Offices:</strong> Kevin: Fleischmann Agriculture, room 220e;
+Todd: Fleischmann Agriculture, room 217<br />
+<strong>Email:</strong> <a href="mailto:kevinshoemaker@unr.edu"
+class="email">kevinshoemaker@unr.edu</a>; <a
+href="mailto:tsteury@unr.edu" class="email">tsteury@unr.edu</a>
+(preferred contact)<br />
+<strong>Office hours:</strong> [to be announced], or by
+appointment<br />
+<strong>Credits:</strong> 2 credits, letter grade<br />
+<strong>Section:</strong> 1003 (class number 30643), in person<br />
+<strong>Course website:</strong> <a
+href="https://kevintshoemaker.github.io/Causal-Inference/"
+class="uri">https://kevintshoemaker.github.io/Causal-Inference/</a><br />
+<strong>Syllabus as a PDF:</strong> <a
+href="Syllabus.pdf">Syllabus.pdf</a></p>
+<div id="course-meeting-time" class="section level2">
+<h2>Course meeting time</h2>
+<p><strong>Class meeting:</strong> one 2-hour meeting per week, [day and
+time to be announced], in [room to be announced], January 19 to May 4,
+2027</p>
+</div>
+<div id="course-description" class="section level2">
+<h2>Course description</h2>
+<p>How do we know that one thing causes another? What would it take to
+show that a decline in a wildlife population was driven by habitat loss
+rather than climate, that deer abundance in the past was driven by
+people rather than by climate, or that more species make an ecosystem
+more productive or stable? What can we conclude from observational data
+when an experiment is impossible? And what changes when the system we
+study has feedback, networks and many interacting parts?</p>
+<p>This course introduces the modern tools of causal inference and shows
+how to apply them to research in ecology, natural resources,
+anthropology and related fields. We start with the core ideas: the
+“ladder of causation,” counterfactuals, and causal diagrams (directed
+acyclic graphs, or DAGs). We then work through the main strategies for
+estimating causal effects: experiments, quasi-experimental designs,
+structural equation models and time-series methods. Throughout, we read
+and critique published papers, both those that use formal causal methods
+and those that make causal claims without them. The readings are chosen
+to be accessible to a mixed audience of ecologists, anthropologists and
+others.</p>
+<p>The course is open to graduate students from any department. The
+centerpiece is an individual project: each student builds and refines a
+well-reasoned causal diagram of their own study system, one that can
+guide the design and analysis of their thesis or dissertation
+research.</p>
+</div>
+<div id="prerequisites" class="section level2">
+<h2>Prerequisites</h2>
+<ul>
+<li><p>None required. One regression-level statistics course is
+recommended.</p></li>
+<li><p>No prior training in causal inference, philosophy or R is
+assumed.</p></li>
+</ul>
+</div>
+<div id="course-format" class="section level2">
+<h2>Course format</h2>
+<p>Each weekly meeting has three parts:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Lecture and discussion (20 to 25 minutes),</strong> led
+by Kevin or Todd, introducing the week’s concepts.</p></li>
+<li><p><strong>Paper discussion,</strong> centered on the week’s
+readings. Students help lead these discussions (see “Paper discussion
+leadership” below).</p></li>
+<li><p><strong>Hands-on exercise,</strong> a short problem set or DAG
+workshop done in small groups in class. Exercises can be done with
+pencil and paper; some include optional R extensions.</p></li>
+</ol>
+</div>
+<div id="student-learning-outcomes" class="section level2">
+<h2>Student learning outcomes</h2>
+<p>SLO 1. Distinguish associational, interventional and counterfactual
+questions (the ladder of causation) and say which one a given study
+answers.<br />
+SLO 2. Draw a causal diagram (DAG) for a question in your own field, and
+use it to identify confounders, colliders and mediators and to choose an
+adjustment set.<br />
+SLO 3. Explain the assumptions behind experiments, quasi-experimental
+designs, structural equation models and time-series causal methods, and
+judge when each is credible for a given study system.<br />
+SLO 4. Read a published paper critically for the causal claim it makes,
+the evidence offered, and the assumptions stated and unstated.<br />
+SLO 5. Describe how feedback, network structure and scale complicate
+causal reasoning, and where acyclic graphs stop being adequate.<br />
+SLO 6. Communicate a causal argument clearly in discussion, in a
+presentation and in writing.</p>
+</div>
+<div id="texts" class="section level2">
+<h2>Texts</h2>
+<ul>
+<li><p><strong>Required text:</strong> Pearl, J., and D. Mackenzie
+(2018) <em>The Book of Why: The New Science of Cause and Effect.</em>
+Basic Books. We read four chapters (Introduction and Chapters 1, 4 and
+7); the rest is recommended.</p></li>
+<li><p><strong>Also required:</strong> Chapter 6 of McElreath, R. (2020)
+<em>Statistical Rethinking</em>, 2nd ed. (CRC Press), available free
+online through UNR Libraries.</p></li>
+<li><p><strong>Readings on WebCampus:</strong> most weekly reading
+consists of journal articles, posted on WebCampus. Each week has at most
+two required readings, usually one that frames the concepts and one
+applied paper.</p></li>
+<li><p><strong>Recommended books (not required):</strong> Pearl, Glymour
+and Jewell, <em>Causal Inference in Statistics: A Primer</em> (Wiley,
+2016), the technical companion to <em>The Book of Why</em>;
+Huntington-Klein, <em>The Effect</em> (free online); Cunningham,
+<em>Causal Inference: The Mixtape</em> (free online); Shipley, <em>Cause
+and Correlation in Biology</em>, 2nd ed. (Cambridge, 2016); Johansson et
+al., <em>A Primer to Causal Reasoning About a Complex World</em>
+(Springer, 2024; open access); the rest of McElreath’s <em>Statistical
+Rethinking</em>.</p></li>
+</ul>
+</div>
+<div id="software" class="section level2">
+<h2>Software</h2>
+<ul>
+<li><p><a href="https://www.dagitty.net">dagitty</a>: free, web-based
+tool for drawing and analyzing causal diagrams (DAGs); no account
+needed</p></li>
+<li><p>R: software for statistical computing and graphics (free
+installation); optional, for exercise extensions</p></li>
+</ul>
+</div>
+<div id="grading" class="section level2">
+<h2>Grading</h2>
+<p>The course grade will be based on the following components:</p>
+<ul>
+<li><p>Participation and weekly reading responses 20%</p></li>
+<li><p>In-class exercises 10%</p></li>
+<li><p>Paper discussion leadership 10%</p></li>
+<li><p>“Causal claims in the wild” critique 15%</p></li>
+<li><p>Causal DAG project: initial DAG (Week 5) 10%</p></li>
+<li><p>Causal DAG project: revised DAG and peer review (Week 10)
+5%</p></li>
+<li><p>Causal DAG project: final presentation (Week 15) 10%</p></li>
+<li><p>Causal DAG project: final write-up (finals week) 20%</p></li>
+</ul>
+<p>Grading scale: A (100 to 93), A− (92 to 90), B+ (89 to 87), B (86 to
+83), B− (82 to 80), C+ (79 to 77), C (76 to 73), F (below 73). The UNR
+Graduate School requires a C or better for a course to count toward a
+graduate degree, so C is the lowest passing grade.</p>
+<p><strong>Participation and weekly reading responses (20
+points).</strong> Come to class having done the reading and ready to
+discuss it. At least 2 hrs before class each week, post a short response
+(about 150 words) on WebCampus: one point you found important and one
+question you want to discuss. Your two lowest response scores are
+dropped.</p>
+<p><strong>In-class exercises (10 points).</strong> Each week’s hands-on
+exercise is graded for completion (or good-faith effort to complete!),
+not on correctness.</p>
+<p><strong>Paper discussion leadership (10 points).</strong> Each
+student (or in pairs if enrollment is large) helps lead the discussion
+of one week’s applied paper. Leaders give a short summary of the paper’s
+causal claim and evidence, and bring three discussion questions. Sign-up
+is in Week 1.</p>
+<p><strong>“Causal claims in the wild” critique (15 points; due Week
+8).</strong> Working individually or in pairs (depending on enrollment),
+find a published paper in your field(s) that makes a causal claim (for
+example, “X drives Y” or “X caused the decline”) without using formal
+causal inference methods. In a joint write-up of about 1,000 words:
+state the claim and which rung of the ladder of causation it reaches;
+draw the DAG the authors implicitly assume; identify likely confounders,
+colliders or selection effects; judge whether the conclusion follows;
+and describe what design or analysis would have supported the claim.
+Each pair also gives a 10-minute presentation of its paper in class
+(Weeks 8 and 9). Choose your paper by Week 4.</p>
+<p><strong>Causal DAG project (45 points total).</strong> Over the
+semester you will build a well-reasoned causal diagram of your own study
+system, aimed at a causal question in your thesis or dissertation
+research. Students without a thesis system yet may choose a well-studied
+system from the literature, with instructor approval.</p>
+<ul>
+<li><p><em>Initial DAG (Week 5):</em> a DAG for your system and focal
+causal question, with one or two sentences justifying each arrow and the
+adjustment set it implies for the effect you care about.</p></li>
+<li><p><em>Revised DAG and peer review (Week 10):</em> an updated DAG
+that incorporates what you learned in Weeks 6 to 9 (including mediation
+and design choices), plus a written review of a classmate’s
+DAG.</p></li>
+<li><p><em>Final presentation (Week 15):</em> an 8 to 10 minute
+presentation of your DAG and its implications.</p></li>
+<li><p><em>Final write-up (due finals week, 1,500 to 2,000 words):</em>
+your final DAG; the justification and assumptions behind it; the
+adjustment set(s) for your focal question; testable implications; a
+discussion of feedback or unmeasured variables the DAG may miss; and the
+study design and analysis you would use to estimate your causal
+effect.</p></li>
+</ul>
+</div>
+<div id="course-schedule" class="section level2">
+<h2>Course schedule</h2>
+<p>The week-by-week schedule, with each week’s required readings, is on
+the <a href="schedule.html">Schedule</a> page.</p>
+</div>
+<div id="classroom-policies" class="section level2">
+<h2>Classroom policies</h2>
+<p><strong>Attendance.</strong> Attendance is expected. Because the
+course depends on discussion and in-class exercises, please tell us in
+advance if you must miss a meeting. Participation is evaluated through
+weekly reading responses and contributions to discussion (see
+Grading).</p>
+<p><strong>Late work and make-up policy.</strong> Submit assignments on
+WebCampus by the start of class on the due date. If you know you will
+miss a class, you may turn work in early. Contact us before the due date
+if you need an extension. If you are sick, please do not come to class.
+If you must miss class due to illness, please contact your instructor
+immediately to make arrangements for any missed work or lecture
+materials.</p>
+<p><strong>Communication.</strong> Course announcements (cancellations,
+room changes, schedule updates) will be posted on WebCampus and sent by
+email. You should expect a response to email within 24 hours on
+weekdays; emails sent after 5 PM on Friday will usually be answered on
+Monday.</p>
+<p><strong>Use of generative artificial intelligence (AI).</strong> This
+course assumes that all work submitted by students - which includes all
+process work, drafts, brainstorming artifacts, final works – will be
+generated by the students themselves, working individually or in groups
+as directed by course assignment instructions. This policy indicates the
+following constitute violations of academic honesty and “cheating”: any
+unauthorized use of generative AI tools (such as ChatGPT), as outlined
+in UNR Academic Standards (<a
+href="https://www.unr.edu/administrative-manual/6000-6999-courses-curricula-and-organizational-change-process/6502-academic-standards">UAM
+6,502</a>).</p>
+<p>Some assignments may allow for the use of the authorized use of such
+tools, but will be expressly described in the assignment instructions.
+For the purposes of those assignments, specific instructions will be
+provided on the use of generative AI tools regarding the type of work
+being allowed (i.e. brainstorming, drafts, final works, etc.). Please
+email the instructor for any questions or concerns.</p>
+</div>
+<div id="university-policies" class="section level2">
+<h2>University policies</h2>
+<p>The statements below use the exact wording of UNR’s Fall 2026
+syllabus template from the Office of the Provost, as required by <a
+href="https://www.unr.edu/administrative-manual/6000-6999-courses-curricula-and-organizational-change-process/6501-syllabus-policy">UAM
+6,501</a>.</p>
+<div id="statement-on-academic-standards" class="section level3">
+<h3>Statement on Academic Standards</h3>
+<p>The University Academic Standards Policy defines academic dishonesty,
+and mandates specific sanctions for violations. See the University
+Academic Standards policy: <a
+href="https://www.unr.edu/administrative-manual/6000-6999-courses-curricula-and-organizational-change-process/6502-academic-standards">UAM
+6,502.</a></p>
+</div>
+<div id="statement-on-student-compliance-with-university-policies"
+class="section level3">
+<h3>Statement on Student Compliance with University Policies</h3>
+<p>In accordance with section 6,502 of the University Administrative
+Manual, a student may receive academic and disciplinary sanctions for
+failure to comply with policy, including this syllabus, for failure to
+comply with the directions of a University Official, for disruptive
+behavior in the classroom, or any other prohibited action. “Disruptive
+behavior” is defined in part as behavior, including but not limited to
+failure to follow course, laboratory or safety rules, or endangering the
+health of others. A student may be dropped from class at any time for
+misconduct or disruptive behavior in the classroom upon recommendation
+of the instructor and with approval of the college dean. A student may
+also receive disciplinary sanctions through the Office of Student
+Conduct for misconduct or disruptive behavior, including endangering the
+health of others, in the classroom. The student shall not receive a
+refund for course fees or tuition.</p>
+</div>
+<div id="statement-of-disability-services" class="section level3">
+<h3>Statement of Disability Services</h3>
+<p>Any student with a disability needing academic adjustments or
+accommodations is requested to speak with me or the <a
+href="http://www.unr.edu/drc">Disability Resource Center</a> (Pennington
+Achievement Center Suite 230) as soon as possible to arrange for
+appropriate accommodations.</p>
+<p><strong>This course may leverage 3rd party web/multimedia content, if
+you experience any issues accessing this content, please notify your
+instructor.</strong></p>
+</div>
+<div id="statement-on-audio-and-video-recording" class="section level3">
+<h3>Statement on Audio and Video Recording</h3>
+<p><strong>Student-created Recordings.</strong> Surreptitious or covert
+video-taping of class or unauthorized audio recording of class is
+prohibited by law and by Board of Regents policy. This class may be
+videotaped, or audio recorded only with the written permission of the
+instructor. In order to accommodate students with disabilities, some
+students may have been given permission to record class lectures and
+discussions. Therefore, students should understand that their comments
+during class may be recorded.</p>
+<p><strong>Instructor-created Recordings.</strong> Class sessions may be
+audio-visually recorded for students in the class to review and for
+enrolled students who are unable to attend live to view. Students who
+participate with their camera on or who use a profile image are
+consenting to have their video or image recorded. If you do not consent
+to have your profile or video image recorded, keep your camera off and
+do not use a profile image. Students who un-mute during class and
+participate orally are consenting to have their voices recorded. If you
+do not consent to have your voice recorded during class, keep your mute
+button activated and only communicate by using the “chat” feature, which
+allows you to type questions and comments live.</p>
+</div>
+<div id="statement-on-maintaining-a-safe-learning-and-work-environment"
+class="section level3">
+<h3>Statement on Maintaining a Safe Learning and Work Environment</h3>
+<p>The University of Nevada, Reno is committed to providing a safe
+learning and work environment for all. If you believe you have
+experienced discrimination, sexual harassment, sexual assault,
+domestic/dating violence, or stalking, whether on or off campus, or need
+information related to immigration concerns, please contact the
+University’s Center for Civil Rights and Equal Access at 775-784-1547.
+Resources and interim measures are available to assist you. For more
+information, please visit the <a
+href="https://www.unr.edu/civil-rights">Center for Civil Rights &amp;
+Equal Access</a> page.</p>
+</div>
+<div id="statement-on-campus-closures-or-delays" class="section level3">
+<h3>Statement on Campus Closures or Delays</h3>
+<p>In the event of class cancelations or delays caused by inclement
+weather conditions, fire/smoke conditions, or other unforeseen
+emergencies, the safety and well-being of students are the University’s
+top priority. Official notifications will be disseminated through the
+University website and other official channels with details related to
+any campus delays or closures.</p>
+<p>In the event of a campus closure, you will be informed as to whether
+the class will be offered remotely or if it will be canceled. If the
+class is cancelled, you will receive information on how to address any
+missed course content.</p>
+<p>Students facing significant impacts due to these events are
+encouraged to communicate with their instructor for potential
+accommodations.</p>
+</div>
+<div id="statement-for-academic-success-services"
+class="section level3">
+<h3>Statement for Academic Success Services</h3>
+<p>Your student fees cover usage of the <a
+href="https://www.unr.edu/university-math-center">University Math
+Center</a>, (775) 784-4433; <a
+href="https://www.unr.edu/tutoring-center">University Tutoring
+Center</a>, (775) 784-6801; and <a
+href="https://www.unr.edu/writing-speaking-center">University Writing
+&amp; Speaking Center</a>, (775) 784-6030. These centers support your
+classroom learning; it is your responsibility to take advantage of their
+services. Keep in mind that seeking help outside of class is the sign of
+a responsible and successful student.</p>
+</div>
+<div id="mental-health-support-statement" class="section level3">
+<h3>Mental Health Support Statement</h3>
+<p>There are times when you may experience difficulties in life, and you
+may benefit from seeking help. Mental health services are available to
+you as a student at no additional cost through Counseling Services at
+the Pennington Student Achievement Center. This includes same-day
+in-person and tele mental health initial consultations, brief individual
+counseling, and group counseling sessions. Limited same-day appointments
+can be scheduled online via <a
+href="https://www.unr.edu/counseling">Counseling Services</a> or by
+calling 775-784-4648. Additional brief drop-in “Let’s Talk” student
+consultations are also available in the Counseling Services Annex
+located at the southwest corner of Great Basin Hall.</p>
+</div>
+<div id="veteran-statement" class="section level3">
+<h3>Veteran Statement</h3>
+<p>Veterans, Reservists, National Guard and military connected family
+members may wish to check the office of <a
+href="https://www.unr.edu/veteran">Veteran Services</a> for benefits and
+support. Besides processing VA educational benefits, the department
+offers a variety of programs year-round to support student academic and
+personal success while transitioning to higher education and throughout
+your educational experience. They welcome inquiries regarding VA
+benefits and assist in navigating resources, the campus, and in the Reno
+community.</p>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

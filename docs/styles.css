@@ -1,0 +1,10 @@
+/* long navbar menus (Lectures) scroll instead of running off the screen */
+.navbar .dropdown-menu {
+  max-height: calc(100vh - 70px);
+  overflow-y: auto;
+}
+
+/* the schedule table is wide: keep the week column narrow and cells top-aligned */
+table td, table th {
+  vertical-align: top;
+}

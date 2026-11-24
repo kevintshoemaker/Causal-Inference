@@ -1,0 +1,100 @@
+---
+title: "Lectures"
+author: "NRES 701A"
+date: "Spring 2027"
+output:
+  html_document:
+    theme: flatly
+    toc: yes
+    toc_float: yes
+    toc_depth: 1
+---
+
+Each weekly meeting opens with a 20 to 25 minute lecture and discussion led by
+Kevin or Todd. Lecture notes for each week will be posted here as the semester
+goes on. For now this page lists the planned topics; see the
+[Schedule](schedule.html) for the readings and in-class exercises.
+
+# Week 1: Why causality? {#week1}
+
+Seeing, doing and imagining: the ladder of causation; causal claims in your own field.
+
+*Lecture notes coming soon.*
+
+# Week 2: What is a cause? {#week2}
+
+Counterfactuals, manipulation and how people infer causes.
+
+*Lecture notes coming soon.*
+
+# Week 3: Causal models and graphs {#week3}
+
+From Bayes nets to causal graphs; reading a causal graph; why predictive models
+are not causal models.
+
+*Lecture notes coming soon.*
+
+# Week 4: Confounding and the smoking debate {#week4}
+
+Confounders, colliders and mediators; drawing a DAG (directed acyclic graph) for
+a shared class example.
+
+*Lecture notes coming soon.*
+
+# Week 5: Back-door criterion, colliders and the do-operator {#week5}
+
+Simpson's paradox; adjustment sets; when "controlling for" a variable makes
+things worse.
+
+*Lecture notes coming soon.*
+
+# Week 6: Two frameworks and mediation {#week6}
+
+Potential outcomes vs. structural causal models; mechanism vs. covariation;
+direct and indirect effects.
+
+*Lecture notes coming soon.*
+
+# Week 7: Experiments and quasi-experiments {#week7}
+
+What randomization and BACI designs do and do not guarantee; matching,
+difference-in-differences, regression discontinuity and instrumental variables.
+
+*Lecture notes coming soon.*
+
+# Week 8: Observational data and unmeasured confounders {#week8}
+
+Selection bias and natural experiments; testing for and addressing confounders
+you cannot measure; fixed effects and panel data.
+
+*Lecture notes coming soon.*
+
+# Week 9: Path analysis and structural equation models {#week9}
+
+Testing a causal model against data; d-separation in practice.
+
+*Lecture notes coming soon.*
+
+# Week 10: Time series and dynamical systems {#week10}
+
+Granger causality and convergent cross mapping: what does each test?
+
+*Lecture notes coming soon.*
+
+# Week 11: Complexity and stability {#week11}
+
+Cause or statistical artifact? The diversity–stability debate.
+
+*Lecture notes coming soon.*
+
+# Week 12: Feedback, networks and systems thinking {#week12}
+
+Why DAGs are acyclic, and what to do about feedback.
+
+*Lecture notes coming soon.*
+
+# Week 13: Synthesis: from DAG to study design {#week13}
+
+Choosing an approach for your own question.
+
+*Lecture notes coming soon.*

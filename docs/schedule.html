@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="NRES 701A" />
+
+
+<title>Schedule</title>
+
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">NRES 701A</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Schedule
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="schedule.html">Course Schedule</a>
+    </li>
+    <li>
+      <a href="Syllabus.pdf">Syllabus (PDF)</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Lectures
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="lectures.html#week1">Week 1: Why causality?</a>
+    </li>
+    <li>
+      <a href="lectures.html#week2">Week 2: What is a cause?</a>
+    </li>
+    <li>
+      <a href="lectures.html#week3">Week 3: Causal models and graphs</a>
+    </li>
+    <li>
+      <a href="lectures.html#week4">Week 4: Confounding and the smoking debate</a>
+    </li>
+    <li>
+      <a href="lectures.html#week5">Week 5: Back-door criterion, colliders and the do-operator</a>
+    </li>
+    <li>
+      <a href="lectures.html#week6">Week 6: Two frameworks and mediation</a>
+    </li>
+    <li>
+      <a href="lectures.html#week7">Week 7: Experiments and quasi-experiments</a>
+    </li>
+    <li>
+      <a href="lectures.html#week8">Week 8: Observational data and unmeasured confounders</a>
+    </li>
+    <li>
+      <a href="lectures.html#week9">Week 9: Path analysis and structural equation models</a>
+    </li>
+    <li>
+      <a href="lectures.html#week10">Week 10: Time series and dynamical systems</a>
+    </li>
+    <li>
+      <a href="lectures.html#week11">Week 11: Complexity and stability</a>
+    </li>
+    <li>
+      <a href="lectures.html#week12">Week 12: Feedback, networks and systems thinking</a>
+    </li>
+    <li>
+      <a href="lectures.html#week13">Week 13: Synthesis: from DAG to study design</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="Links.html">Links</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Schedule</h1>
+<h4 class="author">NRES 701A</h4>
+<h4 class="date">Spring 2027</h4>
+
+</div>
+
+
+<!-- GENERATED by build_site.py from the syllabus. Do not edit by hand. -->
+<p>Note: this schedule is a draft and is subject to change. Please check
+for updates!</p>
+<p>Reading should be completed before the class for which it is listed.
+Spring break and university holidays are not shown; dates will be added
+once the meeting time is set. Readings marked “BoW” are from <em>The
+Book of Why</em>; all others are on WebCampus or online.</p>
+<table>
+<colgroup>
+<col width="3%" />
+<col width="50%" />
+<col width="26%" />
+<col width="19%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Week</th>
+<th>Topic and in-class exercise</th>
+<th>Required reading</th>
+<th>Due</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td><strong>Why causality?</strong> Seeing, doing and imagining: the
+ladder of causation; causal claims in your own field. <em>Exercise:</em>
+place published claims from your field on the ladder.</td>
+<td>BoW Introduction and Ch. 1</td>
+<td>Pre-course survey; sign up for discussion week</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td><strong>What is a cause?</strong> Counterfactuals, manipulation and
+how people infer causes; which cause counts as “the” cause, and does
+that depend on what we can intervene on? <em>Exercise:</em>
+potential-outcomes tables.</td>
+<td>Woodward (SEP), selected sections; Cheng 1997</td>
+<td>Reading responses begin</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td><strong>Causal models and graphs.</strong> From Bayes nets to causal
+graphs; reading a causal graph; why predictive models are not causal
+models; probability refresher. <em>Exercise:</em> draw DAGs in dagitty
+and trace open and closed paths.</td>
+<td>Arif &amp; MacNeil 2022; Bulbulia 2024 (Part 1)</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td><strong>Confounding and the smoking debate.</strong> Confounders,
+colliders and mediators; drawing a DAG for a shared class example.
+<em>Exercise:</em> check the adjustment sets reported in Arif &amp;
+MacNeil 2023; draw the DAG behind Fisher’s argument that smoking does
+not cause lung cancer.</td>
+<td>BoW Ch. 4; Arif &amp; MacNeil 2023; Fisher 1958 (one-page
+letter)</td>
+<td>Choose “claims in the wild” partner and paper</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td><strong>Back-door criterion, colliders and the do-operator.</strong>
+Simpson’s paradox; adjustment sets; when “controlling for” a variable
+makes things worse. <em>Exercise:</em> simulate confounding and collider
+bias; explain and review initial DAGs in small groups.</td>
+<td>BoW Ch. 7; McElreath 2020, Ch. 6</td>
+<td><strong>Initial DAG</strong></td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td><strong>Two frameworks and mediation.</strong> Potential outcomes
+vs. structural causal models; mechanism vs. covariation; direct and
+indirect effects. <em>Exercise:</em> separate direct and indirect
+effects in a DAG.</td>
+<td>Hernán et al. 2019; Bulbulia 2024 (Part 2)</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td><strong>Experiments and quasi-experiments.</strong> What
+randomization and BACI designs do and do not guarantee; matching,
+difference-in-differences, regression discontinuity and instrumental
+variables. <em>Exercise:</em> find the hidden assumptions in a field
+experiment; difference-in-differences with a toy dataset.</td>
+<td>Arif &amp; Massey 2023; Butsic et al. 2017</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td><strong>Observational data and unmeasured confounders.</strong>
+Selection bias and natural experiments; testing for and addressing
+confounders you cannot measure; fixed effects and panel data.
+<em>Exercise:</em> simulate omitted-variable bias.</td>
+<td>Byrnes &amp; Dee 2025; plus one of Watson et al. 2025 or Cardillo
+&amp; Carranza 2025</td>
+<td><strong>“Claims in the wild” critique</strong>; pair
+presentations</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td><strong>Path analysis and structural equation models.</strong>
+Testing a causal model against data; d-separation in practice.
+<em>Exercise:</em> fit and test a simple path model.</td>
+<td>Grace &amp; Irvine 2020; Cole et al. 2024</td>
+<td>Pair presentations (continued)</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td><strong>Time series and dynamical systems.</strong> Granger
+causality and convergent cross mapping: what does each test?
+<em>Exercise:</em> apply both to simulated predator–prey data.</td>
+<td>Sugihara et al. 2012; Barraquand et al. 2021</td>
+<td><strong>Revised DAG and peer review</strong></td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td><strong>Complexity and stability: cause or statistical
+artifact?</strong> The diversity–stability debate. <em>Exercise:</em>
+structured debate.</td>
+<td>Tilman et al. 1998; Doak et al. 1998</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td><strong>Feedback, networks and systems thinking.</strong> Why DAGs
+are acyclic, and what to do about feedback. <em>Exercise:</em> unroll a
+feedback loop through time.</td>
+<td>M. Salmon 1978</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td><strong>Synthesis: from DAG to study design.</strong> Choosing an
+approach for your own question. <em>Exercise:</em> draft an analysis
+plan for your DAG.</td>
+<td>Siegel &amp; Dee 2025</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td><strong>Project workshop.</strong></td>
+<td>None</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td><strong>Final presentations.</strong></td>
+<td>None</td>
+<td><strong>Presentation</strong>; write-up due finals week</td>
+</tr>
+</tbody>
+</table>
+<div id="readings-by-week" class="section level2">
+<h2>Readings by week</h2>
+<p><strong>Week 1.</strong> Pearl, J., and D. Mackenzie (2018) <em>The
+Book of Why: The New Science of Cause and Effect.</em> Basic Books.
+Introduction and Ch. 1.</p>
+<p><strong>Week 2.</strong> Woodward, J. Causation and manipulability.
+<em>Stanford Encyclopedia of Philosophy.</em> (Free online.) — Cheng, P.
+W. (1997) From covariation to causation: A causal power theory.
+<em>Psychological Review</em> 104(2): 367–405.</p>
+<p><strong>Week 3.</strong> Arif, S., and M. A. MacNeil (2022)
+Predictive models aren’t for causal inference. <em>Ecology Letters</em>
+25(8): 1741–1745. <a href="doi:10.1111/ele.14033"
+class="uri">doi:10.1111/ele.14033</a> — Bulbulia, J. A. (2024) Methods
+in causal inference. Part 1: Causal diagrams and confounding.
+<em>Evolutionary Human Sciences</em> 6: e40. <a
+href="doi:10.1017/ehs.2024.35"
+class="uri">doi:10.1017/ehs.2024.35</a></p>
+<p><strong>Week 4.</strong> Pearl and Mackenzie (2018), Ch. 4. — Arif,
+S., and M. A. MacNeil (2023) Applying the structural causal model
+framework for observational causal inference in ecology. <em>Ecological
+Monographs</em> 93(1): e1554. <a href="doi:10.1002/ecm.1554"
+class="uri">doi:10.1002/ecm.1554</a> — Fisher, R. A. (1958) Lung cancer
+and cigarettes? <em>Nature</em> 182: 108. <a href="doi:10.1038/182108a0"
+class="uri">doi:10.1038/182108a0</a> (a one-page letter; free
+online)</p>
+<p><strong>Week 5.</strong> Pearl and Mackenzie (2018), Ch. 7. —
+McElreath, R. (2020) <em>Statistical Rethinking</em>, 2nd ed. CRC Press.
+Ch. 6. Free online through <a
+href="https://unr.primo.exlibrisgroup.com/permalink/01UNR_INST/tbu023/cdi_informaworld_taylorfrancisbooks_10_1201_9780429029608_6_version2">UNR
+Libraries</a>.</p>
+<p><strong>Week 6.</strong> Hernán, M. A., J. Hsu, and B. Healy (2019) A
+second chance to get causal inference right: A classification of data
+science tasks. <em>Chance</em> 32(1). — Bulbulia, J. A. (2024) Methods
+in causal inference. Part 2: Interaction, mediation, and time-varying
+treatments. <em>Evolutionary Human Sciences</em> 6. <a
+href="doi:10.1017/ehs.2024.32"
+class="uri">doi:10.1017/ehs.2024.32</a></p>
+<p><strong>Week 7.</strong> Arif, S., and M. D. B. Massey (2023)
+Reducing bias in experimental ecology through directed acyclic graphs.
+<em>Ecology and Evolution</em> 13. <a href="doi:10.1002/ece3.9947"
+class="uri">doi:10.1002/ece3.9947</a> (open access) — Butsic, V., D. J.
+Lewis, V. C. Radeloff, M. Baumann, and T. Kuemmerle (2017)
+Quasi-experimental methods enable stronger inferences from observational
+data in ecology. <em>Basic and Applied Ecology</em> 19: 1–10.</p>
+<p><strong>Week 8.</strong> Byrnes, J. E. K., and L. E. Dee (2025)
+Causal inference with observational data and unobserved confounding
+variables. <em>Ecology Letters</em> 28: e70023. <a
+href="doi:10.1111/ele.70023" class="uri">doi:10.1111/ele.70023</a> (open
+access) — Plus one of: Watson, E. J., D. J. Glass, and L. C. Petito
+(2025) Toward new directions in human biology: A roadmap for
+anthropological causal inference with observational data. <em>American
+Journal of Human Biology.</em> <a href="doi:10.1002/ajhb.70149"
+class="uri">doi:10.1002/ajhb.70149</a>; or Cardillo, M., and E. Carranza
+(2025) Applying statistical and causal modeling to interpret thermal
+alteration in observational lithic data. <em>Peer Community Journal</em>
+5: e88.</p>
+<p><strong>Week 9.</strong> Grace, J. B., and K. M. Irvine (2020)
+Scientist’s guide to developing explanatory statistical models using
+causal analysis principles. <em>Ecology</em> 101(4): e02962. <a
+href="doi:10.1002/ecy.2962" class="uri">doi:10.1002/ecy.2962</a> — Cole,
+K. E., M. Moffatt, B. F. Codding, and J. M. Broughton (2024) Human
+settlement density, not late Holocene climate change, influenced
+Artiodactyla species abundance in northeastern California faunal
+assemblages. <em>Quaternary International</em> 689–690: 43–54. <a
+href="doi:10.1016/j.quaint.2023.10.006"
+class="uri">doi:10.1016/j.quaint.2023.10.006</a></p>
+<p><strong>Week 10.</strong> Sugihara, G., R. May, H. Ye, C. Hsieh, E.
+Deyle, M. Fogarty, and S. Munch (2012) Detecting causality in complex
+ecosystems. <em>Science</em> 338. — Barraquand, F., C. Picoche, M.
+Detto, and F. Hartig (2021) Inferring species interactions using Granger
+causality and convergent cross mapping. <em>Theoretical Ecology</em>
+14(1): 87–105.</p>
+<p><strong>Week 11.</strong> Tilman, D., C. L. Lehman, and C. E. Bristow
+(1998) Diversity-stability relationships: Statistical inevitability or
+ecological consequence? <em>American Naturalist</em> 151. — Doak, D. F.,
+et al. (1998) The statistical inevitability of stability-diversity
+relationships in community ecology. <em>American Naturalist</em>
+151.</p>
+<p><strong>Week 12.</strong> Salmon, M. H. (1978) What can systems
+theory do for archaeology? <em>American Antiquity</em> 43: 174–183.</p>
+<p><strong>Week 13.</strong> Siegel, K., and L. E. Dee (2025)
+Foundations and future directions for causal inference in ecological
+research. <em>Ecology Letters</em> 28. <a href="doi:10.1111/ele.70053"
+class="uri">doi:10.1111/ele.70053</a></p>
+<div id="suggested-readings-not-required" class="section level3">
+<h3>Suggested readings (not required)</h3>
+<ul>
+<li><p>Pearl and Mackenzie (2018), the remaining chapters (especially
+Ch. 5, the smoking debate; Ch. 6, paradoxes; Ch. 8, counterfactuals; and
+Ch. 9, mediation).</p></li>
+<li><p>Bateson, G. (1972) ‘Form, substance, and difference’ and
+‘Cybernetic explanation.’ In <em>Steps to an Ecology of Mind.</em>
+University of Chicago Press.</p></li>
+<li><p>Dee, L. E., et al. (2023) Clarifying the effect of biodiversity
+on productivity in natural ecosystems with longitudinal data and methods
+for causal inference. <em>Nature Communications</em> 14: 2607. <a
+href="doi:10.1038/s41467-023-37194-5"
+class="uri">doi:10.1038/s41467-023-37194-5</a> (open access)</p></li>
+<li><p>Deffner, D., J. M. Rohrer, and R. McElreath (2022) A causal
+framework for cross-cultural generalizability. <em>Advances in Methods
+and Practices in Psychological Science</em> 5(3).</p></li>
+<li><p>Ferraro, P. J., and M. M. Hanauer (2014) Advances in measuring
+the environmental and social impacts of environmental programs.
+<em>Annual Review of Environment and Resources</em> 39.</p></li>
+<li><p>Glymour, C. (2003) Learning, prediction and causal Bayes nets.
+<em>Trends in Cognitive Sciences</em> 7.</p></li>
+<li><p>Grace, J. B., et al. (2016) Integrative modelling reveals
+mechanisms linking productivity and plant species richness.
+<em>Nature</em> 529.</p></li>
+<li><p>Holland, P. W. (1986) Statistics and causal inference.
+<em>Journal of the American Statistical Association</em> 81.</p></li>
+<li><p>Johansson, L.-G., et al. (2024) <em>A Primer to Causal Reasoning
+About a Complex World.</em> Springer. <a
+href="doi:10.1007/978-3-031-59135-8"
+class="uri">doi:10.1007/978-3-031-59135-8</a> (open access)</p></li>
+<li><p>Kimmel, K., L. E. Dee, M. L. Avolio, and P. J. Ferraro (2021)
+Causal assumptions and causal inference in ecological experiments.
+<em>Trends in Ecology &amp; Evolution</em> 36(12). <a
+href="doi:10.1016/j.tree.2021.08.008"
+class="uri">doi:10.1016/j.tree.2021.08.008</a></p></li>
+<li><p>Laubach, Z. M., E. J. Murray, K. L. Hoke, R. J. Safran, and W.
+Perng (2021) A biologist’s guide to model selection and causal
+inference. <em>Proceedings of the Royal Society B</em> 288(1943):
+20202815. <a href="doi:10.1098/rspb.2020.2815"
+class="uri">doi:10.1098/rspb.2020.2815</a></p></li>
+<li><p>May, R. M. (1972) Will a large complex system be stable?
+<em>Nature</em> 238.</p></li>
+<li><p>Pearl, J., M. Glymour, and N. P. Jewell (2016) <em>Causal
+Inference in Statistics: A Primer.</em> Wiley. Ch. 3.</p></li>
+<li><p>Salmon, W. (1982) Causality in archaeological explanation. In C.
+Renfrew, M. J. Rowlands, and B. A. Segraves (eds.), <em>Theory and
+Explanation in Archaeology</em>, pp. 45–56. Academic Press.</p></li>
+<li><p>Stolley, P. D. (1991) When genius errs: R. A. Fisher and the lung
+cancer controversy. <em>American Journal of Epidemiology</em>
+133(5).</p></li>
+<li><p>Tainter, J. A. (1988) <em>The Collapse of Complex Societies.</em>
+Cambridge University Press. Ch. 4.</p></li>
+</ul>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

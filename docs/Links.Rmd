@@ -1,0 +1,45 @@
+---
+title: "Links"
+author: "NRES 701A"
+date: "Spring 2027"
+output:
+  html_document:
+    theme: flatly
+    toc: yes
+    toc_float: yes
+    toc_depth: 1
+---
+
+A short list of the resources most useful for this course. Please let us know
+if there are other links that you think should be included on this page!
+
+Course readings (journal articles and book chapters) are posted on WebCampus.
+
+# Software
+
+- [dagitty](https://www.dagitty.net): free, web-based tool for drawing and
+  analyzing causal diagrams (DAGs). No account needed.
+- [R](https://www.r-project.org) and [RStudio](https://posit.co/download/rstudio-desktop/):
+  free software for statistical computing. Optional, for exercise extensions.
+
+# Free books and online texts
+
+- [The Effect](https://theeffectbook.net) (Huntington-Klein): a readable
+  introduction to research design and causality.
+- [Causal Inference: The Mixtape](https://mixtape.scunning.com) (Cunningham).
+- [A Primer to Causal Reasoning About a Complex World](https://doi.org/10.1007/978-3-031-59135-8)
+  (Johansson et al. 2024; open access).
+- [Causation and Manipulability](https://plato.stanford.edu/entries/causation-mani/)
+  (Woodward), in the *Stanford Encyclopedia of Philosophy*.
+- [Statistical Rethinking](https://xcelab.net/rm/) (McElreath): book page, with
+  links to the free video lectures.
+
+# Reading lists and other courses
+
+- [Causal inference in ecology: readings](https://lauradee.github.io/EcologyCausalInference/readings.html)
+  (Laura Dee).
+
+# Help at UNR
+
+- [Weekly "Stats Chats"](https://guides.library.unr.edu/StatsChats) at the UNR
+  library: drop-in help with statistics and R.

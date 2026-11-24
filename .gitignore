@@ -1,0 +1,9 @@
+# internal planning notes: not for the public repo
+planning/
+
+# local tooling
+.claude/
+.Rhistory
+.RData
+.Rproj.user/
+__pycache__/

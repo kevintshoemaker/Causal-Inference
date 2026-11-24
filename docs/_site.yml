@@ -1,0 +1,48 @@
+name: NRES_701A
+output_dir: '.'
+navbar:
+  title: NRES 701A
+  left:
+  - text: Home
+    href: index.html
+  - text: Schedule
+    menu:
+    - text: Course Schedule
+      href: schedule.html
+    - text: Syllabus (PDF)
+      href: Syllabus.pdf
+  - text: Lectures
+    menu:
+    - text: 'Week 1: Why causality?'
+      href: lectures.html#week1
+    - text: 'Week 2: What is a cause?'
+      href: lectures.html#week2
+    - text: 'Week 3: Causal models and graphs'
+      href: lectures.html#week3
+    - text: 'Week 4: Confounding and the smoking debate'
+      href: lectures.html#week4
+    - text: 'Week 5: Back-door criterion, colliders and the do-operator'
+      href: lectures.html#week5
+    - text: 'Week 6: Two frameworks and mediation'
+      href: lectures.html#week6
+    - text: 'Week 7: Experiments and quasi-experiments'
+      href: lectures.html#week7
+    - text: 'Week 8: Observational data and unmeasured confounders'
+      href: lectures.html#week8
+    - text: 'Week 9: Path analysis and structural equation models'
+      href: lectures.html#week9
+    - text: 'Week 10: Time series and dynamical systems'
+      href: lectures.html#week10
+    - text: 'Week 11: Complexity and stability'
+      href: lectures.html#week11
+    - text: 'Week 12: Feedback, networks and systems thinking'
+      href: lectures.html#week12
+    - text: 'Week 13: Synthesis: from DAG to study design'
+      href: lectures.html#week13
+  - text: Links
+    href: Links.html
+output:
+  html_document:
+    css: styles.css
+    lib_dir: site_libs
+    self_contained: no
