@@ -14,25 +14,26 @@ output:
 
 Note: this schedule is a draft and is subject to change. Please check for updates!
 
-Reading should be completed before the class for which it is listed. Spring break and university holidays are not shown; dates will be added once the meeting time is set. Readings marked "BoW" are from *The Book of Why*; all others are on WebCampus or online.
+Reading should be completed before the class for which it is listed. Classes meet on Tuesdays; there is no class on March 23 (spring break). Readings marked “BoW” are from *The Book of Why*; all others are on WebCampus or online.
 
 | Week | Topic and in-class exercise | Required reading | Due |
 |--|--------------------------|--------------|----------|
-| 1 | **Why causality?** Seeing, doing and imagining: the ladder of causation; causal claims in your own field. *Exercise:* place published claims from your field on the ladder. | BoW Introduction and Ch. 1 | Pre-course survey; sign up for discussion week |
-| 2 | **What is a cause?** Counterfactuals, manipulation and how people infer causes; which cause counts as "the" cause, and does that depend on what we can intervene on? *Exercise:* potential-outcomes tables. | Woodward (SEP), selected sections; Cheng 1997 | Reading responses begin |
-| 3 | **Causal models and graphs.** From Bayes nets to causal graphs; reading a causal graph; why predictive models are not causal models; probability refresher. *Exercise:* draw DAGs in dagitty and trace open and closed paths. | Arif & MacNeil 2022; Bulbulia 2024 (Part 1) |  |
-| 4 | **Confounding and the smoking debate.** Confounders, colliders and mediators; drawing a DAG for a shared class example. *Exercise:* check the adjustment sets reported in Arif & MacNeil 2023; draw the DAG behind Fisher's argument that smoking does not cause lung cancer. | BoW Ch. 4; Arif & MacNeil 2023; Fisher 1958 (one-page letter) | Choose "claims in the wild" partner and paper |
-| 5 | **Back-door criterion, colliders and the do-operator.** Simpson's paradox; adjustment sets; when "controlling for" a variable makes things worse. *Exercise:* simulate confounding and collider bias; explain and review initial DAGs in small groups. | BoW Ch. 7; McElreath 2020, Ch. 6 | **Initial DAG** |
-| 6 | **Two frameworks and mediation.** Potential outcomes vs. structural causal models; mechanism vs. covariation; direct and indirect effects. *Exercise:* separate direct and indirect effects in a DAG. | Hernán et al. 2019; Bulbulia 2024 (Part 2) |  |
-| 7 | **Experiments and quasi-experiments.** What randomization and BACI designs do and do not guarantee; matching, difference-in-differences, regression discontinuity and instrumental variables. *Exercise:* find the hidden assumptions in a field experiment; difference-in-differences with a toy dataset. | Arif & Massey 2023; Butsic et al. 2017 |  |
-| 8 | **Observational data and unmeasured confounders.** Selection bias and natural experiments; testing for and addressing confounders you cannot measure; fixed effects and panel data. *Exercise:* simulate omitted-variable bias. | Byrnes & Dee 2025; plus one of Watson et al. 2025 or Cardillo & Carranza 2025 | **"Claims in the wild" critique**; pair presentations |
-| 9 | **Path analysis and structural equation models.** Testing a causal model against data; d-separation in practice. *Exercise:* fit and test a simple path model. | Grace & Irvine 2020; Cole et al. 2024 | Pair presentations (continued) |
-| 10 | **Time series and dynamical systems.** Granger causality and convergent cross mapping: what does each test? *Exercise:* apply both to simulated predator–prey data. | Sugihara et al. 2012; Barraquand et al. 2021 | **Revised DAG and peer review** |
-| 11 | **Complexity and stability: cause or statistical artifact?** The diversity–stability debate. *Exercise:* structured debate. | Tilman et al. 1998; Doak et al. 1998 |  |
-| 12 | **Feedback, networks and systems thinking.** Why DAGs are acyclic, and what to do about feedback. *Exercise:* unroll a feedback loop through time. | M. Salmon 1978 |  |
-| 13 | **Synthesis: from DAG to study design.** Choosing an approach for your own question. *Exercise:* draft an analysis plan for your DAG. | Siegel & Dee 2025 |  |
-| 14 | **Project workshop.** | None |  |
-| 15 | **Final presentations.** | None | **Presentation**; write-up due finals week |
+| 1 (Jan 19) | **Why causality?** Seeing, doing and imagining: the ladder of causation; causal claims in your own field. *Exercise:* place published claims from your field on the ladder. | BoW Introduction and Ch. 1 | Pre-course survey; sign up for discussion week |
+| 2 (Jan 26) | **What is a cause?** Counterfactuals, manipulation and how people infer causes; which cause counts as “the” cause, and does that depend on what we can intervene on? *Exercise:* potential-outcomes tables. | Woodward (SEP), selected sections; Cheng 1997 | Reading responses begin |
+| 3 (Feb 2) | **Causal models and graphs.** From Bayes nets to causal graphs; reading a causal graph; why predictive models are not causal models; probability refresher. *Exercise:* draw DAGs in dagitty and trace open and closed paths. | Arif & MacNeil 2022; Bulbulia 2024 (Part 1) |  |
+| 4 (Feb 9) | **Confounding and the smoking debate.** Confounders, colliders and mediators; drawing a DAG for a shared class example. *Exercise:* check the adjustment sets reported in Arif & MacNeil 2023; draw the DAG behind Fisher’s argument that smoking does not cause lung cancer. | BoW Ch. 4; Arif & MacNeil 2023; Fisher 1958 (one-page letter) | Choose “claims in the wild” partner and paper |
+| 5 (Feb 16) | **Back-door criterion, colliders and the do-operator.** Simpson’s paradox; adjustment sets; when “controlling for” a variable makes things worse. *Exercise:* simulate confounding and collider bias; explain and review initial DAGs in small groups. | BoW Ch. 7; McElreath 2020, Ch. 6 | **Initial DAG** |
+| 6 (Feb 23) | **Two frameworks and mediation.** Potential outcomes vs. structural causal models; mechanism vs. covariation; direct and indirect effects. *Exercise:* separate direct and indirect effects in a DAG. | Hernán et al. 2019; Bulbulia 2024 (Part 2) |  |
+| 7 (Mar 2) | **Experiments and quasi-experiments.** What randomization and BACI designs do and do not guarantee; matching, difference-in-differences, regression discontinuity and instrumental variables. *Exercise:* find the hidden assumptions in a field experiment; difference-in-differences with a toy dataset. | Arif & Massey 2023; Butsic et al. 2017 |  |
+| 8 (Mar 9) | **Observational data and unmeasured confounders.** Selection bias and natural experiments; testing for and addressing confounders you cannot measure; fixed effects and panel data. *Exercise:* simulate omitted-variable bias. | Byrnes & Dee 2025; plus one of Watson et al. 2025 or Cardillo & Carranza 2025 | **“Claims in the wild” critique**; pair presentations |
+| 9 (Mar 16) | **Path analysis and structural equation models.** Testing a causal model against data; d-separation in practice. *Exercise:* fit and test a simple path model. | Grace & Irvine 2020; Cole et al. 2024 | Pair presentations (continued) |
+| (Mar 23) | *Spring break: no class.* |  |  |
+| 10 (Mar 30) | **Time series and dynamical systems.** Granger causality and convergent cross mapping: what does each test? *Exercise:* apply both to simulated predator–prey data. | Sugihara et al. 2012; Barraquand et al. 2021 | **Revised DAG and peer review** |
+| 11 (Apr 6) | **Complexity and stability: cause or statistical artifact?** The diversity–stability debate. *Exercise:* structured debate. | Tilman et al. 1998; Doak et al. 1998 |  |
+| 12 (Apr 13) | **Feedback, networks and systems thinking.** Why DAGs are acyclic, and what to do about feedback. *Exercise:* unroll a feedback loop through time. | M. Salmon 1978 |  |
+| 13 (Apr 20) | **Synthesis: from DAG to study design.** Choosing an approach for your own question. *Exercise:* draft an analysis plan for your DAG. | Siegel & Dee 2025 |  |
+| 14 (Apr 27) | **Project workshop.** | None |  |
+| 15 (May 4) | **Final presentations.** | None | **Presentation**; write-up due finals week |
 
 ## Readings by week
 
@@ -40,11 +41,11 @@ Reading should be completed before the class for which it is listed. Spring brea
 
 **Week 2.** Woodward, J. Causation and manipulability. *Stanford Encyclopedia of Philosophy.* (Free online.) — Cheng, P. W. (1997) From covariation to causation: A causal power theory. *Psychological Review* 104(2): 367–405.
 
-**Week 3.** Arif, S., and M. A. MacNeil (2022) Predictive models aren't for causal inference. *Ecology Letters* 25(8): 1741–1745. doi:10.1111/ele.14033 — Bulbulia, J. A. (2024) Methods in causal inference. Part 1: Causal diagrams and confounding. *Evolutionary Human Sciences* 6: e40. doi:10.1017/ehs.2024.35
+**Week 3.** Arif, S., and M. A. MacNeil (2022) Predictive models aren’t for causal inference. *Ecology Letters* 25(8): 1741–1745. doi:10.1111/ele.14033 — Bulbulia, J. A. (2024) Methods in causal inference. Part 1: Causal diagrams and confounding. *Evolutionary Human Sciences* 6: e40. doi:10.1017/ehs.2024.35
 
 **Week 4.** Pearl and Mackenzie (2018), Ch. 4. — Arif, S., and M. A. MacNeil (2023) Applying the structural causal model framework for observational causal inference in ecology. *Ecological Monographs* 93(1): e1554. doi:10.1002/ecm.1554 — Fisher, R. A. (1958) Lung cancer and cigarettes? *Nature* 182: 108. doi:10.1038/182108a0 (a one-page letter; free online)
 
-**Week 5.** Pearl and Mackenzie (2018), Ch. 7. — McElreath, R. (2020) *Statistical Rethinking*, 2nd ed. CRC Press. Ch. 6. Free online through [UNR Libraries](https://unr.primo.exlibrisgroup.com/permalink/01UNR_INST/tbu023/cdi_informaworld_taylorfrancisbooks_10_1201_9780429029608_6_version2).
+**Week 5.** Pearl and Mackenzie (2018), Ch. 7. — McElreath, R. (2020) *Statistical Rethinking*, 2nd ed. CRC Press. Ch. 6. Free online through [UNR Libraries](https://unr.primo.exlibrisgroup.com/permalink/01UNR_INST/tbu023/cdi_informaworld_taylorfrancisbooks_10_1201_9780429029608_6_version2).
 
 **Week 6.** Hernán, M. A., J. Hsu, and B. Healy (2019) A second chance to get causal inference right: A classification of data science tasks. *Chance* 32(1). — Bulbulia, J. A. (2024) Methods in causal inference. Part 2: Interaction, mediation, and time-varying treatments. *Evolutionary Human Sciences* 6. doi:10.1017/ehs.2024.32
 
@@ -52,11 +53,11 @@ Reading should be completed before the class for which it is listed. Spring brea
 
 **Week 8.** Byrnes, J. E. K., and L. E. Dee (2025) Causal inference with observational data and unobserved confounding variables. *Ecology Letters* 28: e70023. doi:10.1111/ele.70023 (open access) — Plus one of: Watson, E. J., D. J. Glass, and L. C. Petito (2025) Toward new directions in human biology: A roadmap for anthropological causal inference with observational data. *American Journal of Human Biology.* doi:10.1002/ajhb.70149; or Cardillo, M., and E. Carranza (2025) Applying statistical and causal modeling to interpret thermal alteration in observational lithic data. *Peer Community Journal* 5: e88.
 
-**Week 9.** Grace, J. B., and K. M. Irvine (2020) Scientist's guide to developing explanatory statistical models using causal analysis principles. *Ecology* 101(4): e02962. doi:10.1002/ecy.2962 — Cole, K. E., M. Moffatt, B. F. Codding, and J. M. Broughton (2024) Human settlement density, not late Holocene climate change, influenced Artiodactyla species abundance in northeastern California faunal assemblages. *Quaternary International* 689–690: 43–54. doi:10.1016/j.quaint.2023.10.006
+**Week 9.** Grace, J. B., and K. M. Irvine (2020) Scientist’s guide to developing explanatory statistical models using causal analysis principles. *Ecology* 101(4): e02962. doi:10.1002/ecy.2962 — Cole, K. E., M. Moffatt, B. F. Codding, and J. M. Broughton (2024) Human settlement density, not late Holocene climate change, influenced Artiodactyla species abundance in northeastern California faunal assemblages. *Quaternary International* 689–690: 43–54. doi:10.1016/j.quaint.2023.10.006
 
 **Week 10.** Sugihara, G., R. May, H. Ye, C. Hsieh, E. Deyle, M. Fogarty, and S. Munch (2012) Detecting causality in complex ecosystems. *Science* 338. — Barraquand, F., C. Picoche, M. Detto, and F. Hartig (2021) Inferring species interactions using Granger causality and convergent cross mapping. *Theoretical Ecology* 14(1): 87–105.
 
-**Week 11.** Tilman, D., C. L. Lehman, and C. E. Bristow (1998) Diversity-stability relationships: Statistical inevitability or ecological consequence? *American Naturalist* 151. — Doak, D. F., et al. (1998) The statistical inevitability of stability-diversity relationships in community ecology. *American Naturalist* 151.
+**Week 11.** Tilman, D., C. L. Lehman, and C. E. Bristow (1998) Diversity-stability relationships: Statistical inevitability or ecological consequence? *American Naturalist* 151. — Doak, D. F., et al. (1998) The statistical inevitability of stability-diversity relationships in community ecology. *American Naturalist* 151.
 
 **Week 12.** Salmon, M. H. (1978) What can systems theory do for archaeology? *American Antiquity* 43: 174–183.
 
@@ -65,33 +66,18 @@ Reading should be completed before the class for which it is listed. Spring brea
 ### Suggested readings (not required)
 
 - Pearl and Mackenzie (2018), the remaining chapters (especially Ch. 5, the smoking debate; Ch. 6, paradoxes; Ch. 8, counterfactuals; and Ch. 9, mediation).
-
-- Bateson, G. (1972) 'Form, substance, and difference' and 'Cybernetic explanation.' In *Steps to an Ecology of Mind.* University of Chicago Press.
-
-- Dee, L. E., et al. (2023) Clarifying the effect of biodiversity on productivity in natural ecosystems with longitudinal data and methods for causal inference. *Nature Communications* 14: 2607. doi:10.1038/s41467-023-37194-5 (open access)
-
+- Bateson, G. (1972) ‘Form, substance, and difference’ and ‘Cybernetic explanation.’ In *Steps to an Ecology of Mind.* University of Chicago Press.
+- Dee, L. E., et al. (2023) Clarifying the effect of biodiversity on productivity in natural ecosystems with longitudinal data and methods for causal inference. *Nature Communications* 14: 2607. doi:10.1038/s41467-023-37194-5 (open access)
 - Deffner, D., J. M. Rohrer, and R. McElreath (2022) A causal framework for cross-cultural generalizability. *Advances in Methods and Practices in Psychological Science* 5(3).
-
 - Ferraro, P. J., and M. M. Hanauer (2014) Advances in measuring the environmental and social impacts of environmental programs. *Annual Review of Environment and Resources* 39.
-
 - Glymour, C. (2003) Learning, prediction and causal Bayes nets. *Trends in Cognitive Sciences* 7.
-
-- Grace, J. B., et al. (2016) Integrative modelling reveals mechanisms linking productivity and plant species richness. *Nature* 529.
-
+- Grace, J. B., et al. (2016) Integrative modelling reveals mechanisms linking productivity and plant species richness. *Nature* 529.
 - Holland, P. W. (1986) Statistics and causal inference. *Journal of the American Statistical Association* 81.
-
-- Johansson, L.-G., et al. (2024) *A Primer to Causal Reasoning About a Complex World.* Springer. doi:10.1007/978-3-031-59135-8 (open access)
-
+- Johansson, L.-G., et al. (2024) *A Primer to Causal Reasoning About a Complex World.* Springer. doi:10.1007/978-3-031-59135-8 (open access)
 - Kimmel, K., L. E. Dee, M. L. Avolio, and P. J. Ferraro (2021) Causal assumptions and causal inference in ecological experiments. *Trends in Ecology & Evolution* 36(12). doi:10.1016/j.tree.2021.08.008
-
-- Laubach, Z. M., E. J. Murray, K. L. Hoke, R. J. Safran, and W. Perng (2021) A biologist's guide to model selection and causal inference. *Proceedings of the Royal Society B* 288(1943): 20202815. doi:10.1098/rspb.2020.2815
-
+- Laubach, Z. M., E. J. Murray, K. L. Hoke, R. J. Safran, and W. Perng (2021) A biologist’s guide to model selection and causal inference. *Proceedings of the Royal Society B* 288(1943): 20202815. doi:10.1098/rspb.2020.2815
 - May, R. M. (1972) Will a large complex system be stable? *Nature* 238.
-
 - Pearl, J., M. Glymour, and N. P. Jewell (2016) *Causal Inference in Statistics: A Primer.* Wiley. Ch. 3.
-
-- Salmon, W. (1982) Causality in archaeological explanation. In C. Renfrew, M. J. Rowlands, and B. A. Segraves (eds.), *Theory and Explanation in Archaeology*, pp. 45–56. Academic Press.
-
+- Salmon, W. (1982) Causality in archaeological explanation. In C. Renfrew, M. J. Rowlands, and B. A. Segraves (eds.), *Theory and Explanation in Archaeology*, pp. 45–56. Academic Press.
 - Stolley, P. D. (1991) When genius errs: R. A. Fisher and the lung cancer controversy. *American Journal of Epidemiology* 133(5).
-
 - Tainter, J. A. (1988) *The Collapse of Complex Societies.* Cambridge University Press. Ch. 4.
